@@ -46,10 +46,10 @@ return [
             'provider' => 'users',
         ],
 
-         'web' => [
-            'driver' => 'session',
-            'provider' => 'admin',
-        ],
+        //  'web' => [
+        //     'driver' => 'session',
+        //     'provider' => 'admin',
+        // ],
     ],
 
     /*
@@ -80,10 +80,10 @@ return [
         //     'table' => 'users',
         // ],
 
-        'admin' => [
-            'driver' => 'eloquent',
-            'model' => App\admin::class,
-        ],
+        // 'admin' => [
+        //     'driver' => 'eloquent',
+        //     'model' => App\admin::class,
+        // ],
 
     ],
 
@@ -109,11 +109,11 @@ return [
             'expire' => 60,
         ],
 
-        'admin' => [
-            'provider' => 'admin',
-            'table' => 'password_resets',
-            'expire' => 60,
-        ],
+        // 'admin' => [
+        //     'provider' => 'admin',
+        //     'table' => 'password_resets',
+        //     'expire' => 60,
+        // ],
     ],
 
 ];
