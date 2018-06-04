@@ -46,10 +46,14 @@ return [
             'provider' => 'users',
         ],
 
-        //  'web' => [
-        //     'driver' => 'session',
-        //     'provider' => 'admin',
-        // ],
+       'admin' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+        ],
+        'admin-api' => [
+            'driver' => 'token',
+            'provider' => 'admins',
+        ],
     ],
 
     /*
@@ -80,10 +84,10 @@ return [
         //     'table' => 'users',
         // ],
 
-        // 'admin' => [
-        //     'driver' => 'eloquent',
-        //     'model' => App\admin::class,
-        // ],
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Admin::class,
+        ],
 
     ],
 

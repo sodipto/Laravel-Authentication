@@ -32,3 +32,16 @@ Route::get('/home', 'HomeController@index')->name('home');
 //  Route::post('login', 'Admin\LoginController@login')->name('admin.login');
 //  Route::get('logout', 'Admin\LoginController@logout');
 // });
+
+ Route::prefix('admin')->group(function() {
+
+	    Route::get('/login','Admin\AdminLoginController@showLoginForm')->name('admin.login');
+	    Route::post('/login', 'Admin\AdminLoginController@login')->name('admin.login.submit');
+	    Route::post('/logout', 'Admin\AdminLoginController@logout')->name('admin.logout');
+
+        Route::get('/dashboard', 'Admin\AdminController@index')->name('Admin.dashboard');
+         Route::get('/about', 'Admin\AdminController@about')->name('Admin.about');
+  
+  }); 
+
+ 
