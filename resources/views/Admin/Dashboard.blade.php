@@ -15,6 +15,13 @@
                     @endif
 
                     You are logged in Admin!
+
+                    Your ID:  {{ Auth::user()->id }}
+                   @if(Auth::guard('admin')->check())
+                        Hello {{Auth::guard('admin')->user()->name}}
+                    @elseif(Auth::guard('user')->check())
+                        Hello {{Auth::guard('user')->user()->name}}
+                    @endif
                 </div>
             </div>
         </div>
